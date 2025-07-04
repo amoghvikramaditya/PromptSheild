@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PromptShield - Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+  <div class="star-field"></div>
+  <div class="background-overlay"></div>
+  <nav class="main-nav">
+    <div class="nav-logo">PromptShield</div>
+    <ul class="nav-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/analysis">Analysis</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <button id="modeToggle" class="mode-toggle-btn">Switch to Sith Mode</button>
+  </nav>
+  <main class="hero-section">
+    <h2 class="hero-welcome">PromptShield: Force Analysis</h2>
+    <h1 class="hero-title">Detailed analysis of the Force balance in your prompt security</h1>
+    <section class="analytics-grid">
+      <div class="analytics-tile stats-tile">
+        <button class="refresh-btn" onclick="refreshAnalysis()">🔄 Refresh Analysis</button>
+        <div class="stats-grid-vertical">
+          <div class="stat-card jedi-stat">
+            <h3>🛡️ Jedi Defense</h3>
+            <div class="stat-number" id="jediCount">0</div>
+            <div class="stat-label">Safe Prompts</div>
+            <div class="progress-bar">
+              <div class="progress-fill jedi-progress" id="jediProgress" style="width: 0%"></div>
+            </div>
+            <div id="jediPercentage">0%</div>
+          </div>
+          <div class="stat-card sith-stat">
+            <h3>⚔️ Sith Attacks</h3>
+            <div class="stat-number" id="sithCount">0</div>
+            <div class="stat-label">Risky Prompts</div>
+            <div class="progress-bar">
+              <div class="progress-fill sith-progress" id="sithProgress" style="width: 0%"></div>
+            </div>
+            <div id="sithPercentage">0%</div>
+          </div>
+          <div class="stat-card neutral-stat">
+            <h3>📊 Total Analyzed</h3>
+            <div class="stat-number" id="totalCount">0</div>
+            <div class="stat-label">Prompts Processed</div>
+            <div class="stat-label">Threat Level: <span class="threat-level" id="threatLevel">Unknown</span></div>
+          </div>
+          <div class="stat-card neutral-stat">
+            <h3>🎯 Detection Rate</h3>
+            <div class="stat-number" id="detectionRate">0%</div>
+            <div class="stat-label">Accuracy Score</div>
+            <div class="stat-label">Security Status: <span id="securityStatus">Monitoring</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="analytics-tile charts-tile">
+        <div class="chart-card">
+          <h3 class="chart-title">Force Distribution Analysis</h3>
+          <canvas id="forceChart" width="400" height="200"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3 class="chart-title">Threat Timeline</h3>
+          <canvas id="timelineChart" width="400" height="200"></canvas>
+        </div>
+      </div>
+      <div class="analytics-tile insights-tile">
+        <div class="insights-section">
+          <h2>🤖 AI Security Insights</h2>
+          <div id="insightsContainer">
+            <div class="insight-item info"><strong>📈 System Status:</strong> Analyzing prompt patterns to generate insights...</div>
+          </div>
+        </div>
+        <div class="flag-analysis">
+          <h3 class="chart-title">🚩 Active Security Flags</h3>
+          <div id="flagsContainer">
+            <p>Loading security flags...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <button class="back-btn" onclick="window.location.href='/'">← Back to PromptShield</button>
+  </main>
+  <footer class="main-footer">
+    May the Force be with you! | © 2024 PromptShield
+  </footer>
+  <script src="/static/analysis_enhanced.js"></script>
+</body>
+</html> 

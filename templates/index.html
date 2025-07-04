@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PromptShield: Jedi Firewall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Orbitron Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="star-field"></div>
+  <div class="background-overlay"></div>
+  <nav class="main-nav">
+    <div class="nav-logo">PromptShield</div>
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="/analysis">Analysis</a></li>
+      <li><a href="#" id="documentationLink">Documentation</a></li>
+      <li><a href="#" id="aboutLink">About</a></li>
+    </ul>
+    <button id="modeToggle" class="mode-toggle-btn">Jedi Mode</button>
+  </nav>
+  <main class="hero-section">
+    <h2 class="hero-welcome">Welcome to the website of</h2>
+    <h1 class="hero-title" id="modeTitle">JEDI COUNCIL</h1>
+    <h3 class="hero-subtitle" id="modeSubtitle">Guardian of Peace & Justice</h3>
+    <section class="glass-card">
+      <label for="promptInput" class="prompt-label">Enter Your Prompt</label>
+      <textarea id="promptInput" class="prompt-textarea" placeholder="Share your wisdom..."></textarea>
+      <div class="button-row">
+        <button id="sendBtn" class="action-btn">Send to Jedi Council</button>
+        <button id="micBtn" class="action-btn mic-btn">
+          <span class="mic-icon">🎤</span> Voice Input
+        </button>
+      </div>
+      <div id="resultArea" class="result-box"></div>
+      <div id="sithFeedbackArea" style="display:none; margin-top: 1em;">
+        <button id="sithOverrideBtn" class="action-btn" style="margin-bottom:0.5em;">Was this actually a SITH INFILTRATOR prompt?</button>
+        <div id="sithOverrideInputArea" style="display:none;">
+          <label for="sithKeyPointInput"><strong>Highlight or enter the key part of the prompt that is risky:</strong></label>
+          <textarea id="sithKeyPointInput" rows="2" style="width:100%; margin-bottom:0.5em;"></textarea>
+          <button id="submitSithKeyPointBtn" class="action-btn">Submit as Red Flag</button>
+          <span id="sithFeedbackStatus" style="margin-left:1em;"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer" id="modeFooter">
+    May the Force be with you! | © 2024 PromptShield
+  </footer>
+  <div id="loadingOverlay" class="loading-overlay" style="display:none;">
+    <div class="spinner"></div>
+    <div class="loading-text" id="loadingText">Consulting the Jedi Council...</div>
+  </div>
+  <div id="documentationModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" id="closeDocumentation">&times;</span>
+      <h2>Documentation</h2>
+      <h3>Project Overview</h3>
+      <p>PromptShield is an AI-powered prompt security firewall designed to analyze, classify, and defend against prompt injection and risky prompt patterns in LLM-based applications. It provides real-time analysis, threat detection, and actionable insights to help users and developers maintain safe and ethical AI interactions.</p>
+      <h3>How It Works</h3>
+      <ul>
+        <li>Users submit prompts to the system.</li>
+        <li>The backend analyzes prompts using a combination of heuristics, LLM-based classification, and custom security flags.</li>
+        <li>Risky prompts are flagged, and Jedi-Safe rewrites are suggested.</li>
+        <li>Analytics and insights are provided on the analysis page, including threat levels and trends.</li>
+      </ul>
+      <h3>Tech Stack Overview</h3>
+      <ul>
+        <li><strong>Frontend:</strong> HTML, CSS (custom + Tailwind), JavaScript</li>
+        <li><strong>Backend:</strong> Python (Flask)</li>
+        <li><strong>AI/LLM:</strong> OpenAI API (or compatible LLM)</li>
+        <li><strong>Visualization:</strong> Chart.js</li>
+        <li><strong>Other Tech:</strong> LocalStorage, Web APIs, Responsive Design, Star Wars themed UI</li>
+      </ul>
+      <h3>Other Technologies Used</h3>
+      <ul>
+        <li>Speech Recognition (Web Speech API)</li>
+        <li>Dynamic theming (Jedi/Sith mode)</li>
+        <li>Custom security flag management</li>
+      </ul>
+    </div>
+  </div>
+  <div id="aboutModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" id="closeAbout">&times;</span>
+      <h2>About PromptShield</h2>
+      <p>PromptShield is designed to protect users and AI systems from prompt injection attacks and unsafe prompt patterns. By providing real-time analysis, actionable insights, and safe prompt rewrites, it empowers users to interact with AI more securely and responsibly. The project aims to foster trust, safety, and ethical use of large language models in any application.</p>
+    </div>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
