@@ -65,15 +65,9 @@ PromptShield is open source and free for the community. For commercial use, it c
 - Mascot (FN-R0GUE) generated
 - Added Ester egg in the website
 
----
+--
 
-## 7. 🌐 Live Demo
-
-- [Live Website](https://your-deployment-link.com) <!-- Replace with your actual link -->
-
----
-
-## 8. 📦 How to Run
+## 7. 📦 How to Run
 
 1. **Clone the repository:**
    ```bash
@@ -98,7 +92,7 @@ PromptShield is open source and free for the community. For commercial use, it c
 
 ---
 
-## 9. 🖥️ Usage
+## 8. 🖥️ Usage
 
 - Enter prompts on the main page and receive Jedi/Sith verdicts and safe rewrites.
 - Switch between Jedi and Sith modes for different UI themes.
@@ -108,7 +102,7 @@ PromptShield is open source and free for the community. For commercial use, it c
 
 ---
 
-## 10. 🧩 Customization
+## 9. 🧩 Customization
 
 - Update security flags and prompt analysis logic in `promptshield.py`.
 - Modify UI styles in `static/style.css` and templates in `templates/`.
@@ -117,17 +111,12 @@ PromptShield is open source and free for the community. For commercial use, it c
 
 ---
 
-## 11. 🔒 Security
+## 10. 🔒 Security
 
 - API keys and secrets are loaded from `.env` (never commit your real keys).
 - `.gitignore` excludes `.env` and any files containing API keys.
 
 ---
 
-## 12. 📄 License
-
-[Add your license here]
-
----
 
 > "The Force will be with you. Always." 
